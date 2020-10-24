@@ -25,25 +25,28 @@
     text-transform: uppercase;
     font-family: 'Bebas Neue', cursive;
     font-size: 20px;
-    padding: 17px 50px;
-
-    
+    padding: 17px 50px;  
 }
+
 .topo nav a:hover{
     background-color: #000;
     text-decoration: underline;
 
 }
 .topo nav ul{
-
    width: 90%;
    max-width: 600px;
    height: 60px;
    /* background-color: lime; */
    list-style-type: none;/*Remove os marcadore da lista*/
-   display: flex; 
-   justify-content: space-around;
-   align-items: center;
+}
+#meusLinks{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.btnMenu{
+    display: none;
 }
 .banner{
     width: 100%;
@@ -225,10 +228,11 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
+    padding-bottom: 100px;
 
 }
-
-@media screen and (max-width: 1200px){
+/* Resolução de 768 até 1199 */
+@media screen and (max-width: 1199px){
     .topo nav{
         width: 80%;
     }
@@ -276,4 +280,127 @@
     .text-endereco img{
         position: unset;
     } 
+
+}
+
+/* Resolução de 576 até 767 */
+@media screen and (max-width: 767px){
+
+    .btnMenu{
+        display: block;
+    }
+    .topo nav{
+        width: 100%;
+    }
+    .topo nav ul{
+        width: 100%;
+        max-width: 100%;
+        height: 350px;
+        flex-direction: column;
+        position: absolute;
+        background-color: #000;
+        top:60px;
+        left: 0;
+
+    }
+    #meusLinks{
+        display: none;
+    }
+    .banner_text h1{
+        font-size: 60px;
+    }
+    .sobre h2{
+        font-size: 60px;
+        padding: -65px opx;
+    }
+    .conteudo_sobre{
+        /* width: 100%; */
+        max-width: 550px;
+    }
+    
+    .texto_sobre{
+        width: 100%;
+        max-width: 550px;
+    }
+    
+    .conteudo_sobre picture{
+        width: 85%;
+        max-width: 600px;
+        padding-left: 90px;
+    }
+    
+    .conteudo_sobre h3{
+        font-size: 60px;
+        text-align: center;
+        /* margin: 0px 90px; */
+    }
+    
+    .conteudo_sobre p{
+        font-size: 16px;
+        /* margin: 0px 90px; */
+    }
+    
+    .bk_info{
+        width: 100%;
+        height: 700px;
+    }
+    
+    .info{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+
+}
+/* Resolução do 375 até 575 */
+@media screen and (max-width: 575px){
+    
+    .banner_text h1{
+        font-size: 50px;
+    }
+    .banner_text p{
+        font-size: 40px;
+    }
+
+.sobre h2{
+    font-size: 45px;
+    padding: -65px opx;
+}
+.conteudo_sobre{
+    /* width: 100%; */
+    max-width: 550px;
+}
+
+.texto_sobre{
+    width: 100%;
+    max-width: 550px;
+}
+
+.conteudo_sobre picture{
+    width: 85%;
+    max-width: 600px;
+    padding-left: 90px;
+}
+
+.conteudo_sobre h3{
+    font-size: 45px;
+    text-align: center;
+    /* margin: 0px 90px; */
+}
+
+.conteudo_sobre p{
+    font-size: 14px;
+    /* margin: 0px 90px; */
+}
+
+.bk_info{
+    width: 100%;
+    height: 700px;
+}
+
+.info{
+    flex-direction: column;
+    padding: 20px;
+}
+
 }
